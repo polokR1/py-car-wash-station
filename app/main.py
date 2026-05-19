@@ -1,6 +1,3 @@
-from pygments.lexers import clean
-
-
 class Car:
     def __init__(self, comfort_class : int, clean_mark : int, brand : str):
         self.comfort_class = comfort_class
@@ -39,7 +36,6 @@ class CarWashStation:
             if car.clean_mark < self.clean_power:
                 income += self.calculate_washing_price(car)
                 self.wash_single_car(car)
-
         return round(income, 1)
 
     def rate_service(self, rating):
@@ -47,15 +43,5 @@ class CarWashStation:
             self.average_rating
             * self.count_of_ratings)
         total_rating += rating
-
         self.count_of_ratings += 1
         self.average_rating = round(total_rating / self.count_of_ratings, 1)
-
-
-
-
-
-
-
-
-
